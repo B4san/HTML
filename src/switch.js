@@ -23,11 +23,11 @@ function jugo_de_fresas() {
 fruta = userInput.toLowerCase()
 
 switch (fruta) {
-    case "fresa":  
+    case "1":  
     jugo_de_fresas()
 break
-    case "naranja":
-    case "mandarina":
+    case "2":
+    case "3":
     jugo_de_naranja()
 break
 default : 
