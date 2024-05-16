@@ -12,16 +12,47 @@ construir(largo)
 
 function llenararreglo(){
     for(let i = 0; i< arreglo.length; i++){
-        let numeroAleatorio = Math.floor(Math.random()* 20) + 1
+        let numeroAleatorio = Math.floor(Math.random()* 20) + 1;
     arreglo[i] = numeroAleatorio
     }
 }
-
-do{
-    var opcion = parseInt(prompt("1. Llenar arreglo"))
-    switch(opcion){
-        case 1:
-            llenararreglo()
-        break
+function promedioarreglo(){
+    let suma = 0;
+    for (let i = 0; i< arreglo.length; i++){
+        suma += arreglo[i];
     }
-}while(true)
+    console.log("El promedio del arreglo es:" + suma / arreglo.length);
+}
+function mayorespromedio(){
+    
+}
+
+
+
+
+
+
+do {
+    var respuesta = prompt("1.Llenar arreglo\n2.Promedio arreglo\n5. Salir")
+
+    switch (respuesta) {
+        case "1":
+            let opcionaLlenarArreglo =
+            confirm("¿Desea llenar el arreglo?");
+            if (opcionaLlenarArreglo){
+                llenararreglo();
+                alert("El arreglo se ha llenado");
+                console.log(arreglo)
+            }else{
+                alert("El arreglo no ha sido llenado")
+            }
+            break;
+
+        case "5":
+                respuesta = 0
+                break;
+        case "2":
+            promedioarreglo();
+            }
+
+     }while  (respuesta != 0);
