@@ -57,27 +57,27 @@ function sumaImPares() {
 }
 
 function mayorArreglo() {
-    let max = arreglo[0];
+    let Mayor = arreglo[0];
     for(let i = 1; i < arreglo.length; i++) {
-        if(arreglo[i] > max) {
-            max = arreglo[i];
+        if(arreglo[i] > Mayor) {
+            Mayor = arreglo[i];
         }
     }
-    console.log("Mayor elemento en el arreglo: ", max);
+    console.log("Mayor elemento en el arreglo: ", Mayor);
 }
 
 function mayorDiferencia() {
-    let maxDif = 0;
+    let MAyDif = 0;
     for(let i = 0; i < arreglo.length - 1; i++) {
         let dif = arreglo[i] - arreglo[i+1];
         if(dif < 0) {
             dif = -dif;
         }
-        if(dif > maxDif) {
-            maxDif = dif;
+        if(dif > MAyDif) {
+            MAyDif = dif;
         }
     }
-    console.log("Mayor diferencia: ", maxDif);
+    console.log("Mayor diferencia: ", MAyDif);
 }
 
 function encontrarElemento() {
@@ -130,11 +130,13 @@ function mostrarArreglo() {
         contenido += arreglo[i] + " ";
     }
     console.log("Contenido del arreglo: ", contenido);
+    alert("Contenido del arreglo:" + contenido);
 }
 
 function finalizarAplicacion() {
     arreglo = [];
     console.log("Aplicación finalizada.");
+    alert("Aplicacion Finalizada");
 }
 
 // llamo a las funciones
